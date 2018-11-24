@@ -22,7 +22,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="45dp"
             android:src="@drawable/an"
-
             />
 
         <TextView
@@ -62,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
             android:layout_gravity="center_horizontal"
-            android:text="Incepe un nou challenge"
+            android:text="Harta 1"
             android:textColor="#fff"
             android:textSize="21sp"
             android:textStyle="bold"/>

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center"
+    android:background="@drawable/model"
     >
     <CheckBox
         android:layout_width="100dp"
@@ -21,13 +22,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="barul"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:gravity="center"/>
         <TextView
             android:id="@+id/bauturi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="bauturi"
-            android:textSize="30dp"/>
+            android:textSize="18dp"
+            android:gravity="center"/>
     </LinearLayout>
 
 

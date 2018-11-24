@@ -17,12 +17,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class hartile extends AppCompatActivity {
-    private Button start;
+    private Button start, finish;
     private Chronometer cronos;
     String[] Baruri = {"Studio 26","Booha","Niko","Living pub","Infinity"};
     String[] Bauturi = {"2 shoturi absint, o bere", "300ml de coniac", "500ml de vin","200ml de votca, o bere","100ml Unirea"};
-
+    CheckBox box;
     ListView list;
+    int nr=0;
     private long lastpause;
 
     @Override
@@ -32,11 +33,13 @@ public class hartile extends AppCompatActivity {
 
         start =  findViewById(R.id.start);
         cronos = findViewById(R.id.crono);
+        finish = findViewById(R.id.finish);
 
         list = findViewById(R.id.lista);
-        MyAdapter adapter = new MyAdapter(this, Baruri, Bauturi);
+        MyAdapter adapter = new MyAdapter(this, Baruri, Bauturi, box);
         list.setAdapter(adapter);
-
+        list.setSelector(android.R.color.transparent);
+        list.setDivider(null);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,15 +54,22 @@ public class hartile extends AppCompatActivity {
                 start.setEnabled(false);
             }
         });
-
-
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cronos.stop();
+                finish.setEnabled(false);
+                
+            }
+        });
     }
     class MyAdapter extends ArrayAdapter<String>{
         Context context;
         String myBaruri[];
         String myBauturi[];
+        CheckBox box;
 
-        MyAdapter(Context c, String[] baruri, String[] bauturi){
+        MyAdapter(Context c, String[] baruri, String[] bauturi, CheckBox box){
             super(c,R.layout.row,R.id.bar, Baruri);
             this.context=c;
             this.myBaruri=baruri;
@@ -69,13 +79,16 @@ public class hartile extends AppCompatActivity {
         @NonNull
         @Override
         public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
+
             LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = layoutInflater.inflate(R.layout.row, parent, false);
             TextView myBar = row.findViewById(R.id.bar);
             TextView myBautura = row.findViewById(R.id.bauturi);
 
+
             myBar.setText(Baruri[position]);
             myBautura.setText(Bauturi[position]);
+
             return row;
         }
     }
