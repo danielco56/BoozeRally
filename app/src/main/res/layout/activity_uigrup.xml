@@ -3,24 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Groups">
+    tools:context=".UIGrup"
+    android:orientation="vertical">
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Nume grup"
-        android:id="@+id/denGrup"
-        />
+        android:textAlignment="center"
+        android:id="@+id/denumire"/>
     <ListView
         android:layout_width="match_parent"
-        android:id="@+id/listView"
-        android:layout_height="wrap_content"></ListView>
-    <Button
-        android:layout_width="match_parent"
-        android:id="@+id/addButton"
-        android:layout_height="50dp"
-        android:text="Save"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/listaP"></ListView>
 
 </LinearLayout>

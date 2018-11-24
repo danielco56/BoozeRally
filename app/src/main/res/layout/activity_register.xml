@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".Register">
 
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username" />
 
     <EditText
         android:id="@+id/email"
@@ -21,11 +26,12 @@
         android:hint="password"
         android:inputType="textPassword" />
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="password" />
+        android:hint="password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/registerButton"

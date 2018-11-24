@@ -17,11 +17,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Register extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    private EditText email, password;
+    private EditText email, password,user;
     private Button registerB;
     private TextView register;
+    public static ArrayList<String> Users=new ArrayList<>();
 
 
     @Override
@@ -31,9 +35,11 @@ public class Register extends AppCompatActivity {
 
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.pass);
+        user = (EditText) findViewById(R.id.user);
         registerB = (Button) findViewById(R.id.registerButton);
         register = (TextView) findViewById(R.id.back);
         mAuth = FirebaseAuth.getInstance();
+
 
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +53,7 @@ public class Register extends AppCompatActivity {
         registerB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Users.add(user.getText().toString());
                 Register();
             }
         });

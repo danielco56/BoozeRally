@@ -23,6 +23,7 @@ public class Login extends AppCompatActivity {
     private EditText email, password;
     private Button log;
     private TextView register;
+    private Register reg=new Register();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,10 @@ public class Login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         log = (Button) findViewById(R.id.login);
         register = (TextView) findViewById(R.id.register);
+
+        reg.Users.add("dragonu");
+        reg.Users.add("istvan");
+        reg.Users.add("Chiori");
 
         log.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,8 +70,8 @@ public class Login extends AppCompatActivity {
                             progressDialog.dismiss();
                             if (task.isSuccessful()) {
                                 Toast.makeText(Login.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                                //  Intent log =new Intent(Login.this, Groups.class);
-                                //   startActivity(log);
+                                Intent log = new Intent(Login.this, Groups.class);
+                                startActivity(log);
                             } else {
                                 Toast.makeText(Login.this, "Please try again!", Toast.LENGTH_SHORT).show();
                             }
