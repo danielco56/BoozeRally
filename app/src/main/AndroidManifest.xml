@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".Groups" />
+        <activity android:name=".Trasee" />
+        <activity android:name=".Traseul1"></activity>
     </application>
 
 </manifest>
