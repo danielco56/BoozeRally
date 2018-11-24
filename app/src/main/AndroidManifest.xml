@@ -20,7 +20,8 @@
         <activity android:name=".Trasee" />
         <activity android:name=".Traseul1" />
         <activity android:name=".Groups" />
-        <activity android:name=".UIGrup"></activity>
+        <activity android:name=".UIGrup" />
+        <activity android:name=".hartile"></activity>
     </application>
 
 </manifest>

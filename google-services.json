@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "883128785195",
+    "firebase_url": "https://booze-rally.firebaseio.com",
+    "project_id": "booze-rally",
+    "storage_bucket": "booze-rally.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883128785195:android:1a4b64e036efb643",
+        "android_client_info": {
+          "package_name": "com.example.daniel.boozerally"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883128785195-l7an4hsph1urfm0qdo89ncabum28opuc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.daniel.boozerally",
+            "certificate_hash": "35ef13cbb1f8fd6dd8fc8b5c2b77ac235a3447a6"
+          }
+        },
+        {
+          "client_id": "883128785195-cv0764vv5en9kcrqlaaufb1vpa9a5j7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5kPh10xkgMwIYk6z1x0JQ3cDnLC5N_tU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883128785195-cv0764vv5en9kcrqlaaufb1vpa9a5j7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
