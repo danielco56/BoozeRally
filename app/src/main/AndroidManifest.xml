@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Groups" />
         <activity android:name=".Trasee" />
-        <activity android:name=".Traseul1"></activity>
+        <activity android:name=".Traseul1" />
+        <activity android:name=".Groups"></activity>
     </application>
 
 </manifest>
