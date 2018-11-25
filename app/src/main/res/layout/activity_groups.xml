@@ -8,19 +8,30 @@
     tools:context=".Groups">
 
     <EditText
+
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Nume grup"
+        android:hint="  Group Name"
+        android:drawableLeft="@drawable/ic_home_black_24dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/mybutton"
         android:id="@+id/denGrup"
         />
     <ListView
+        android:layout_margin="5dp"
+        android:padding="5dp"
         android:layout_width="match_parent"
         android:id="@+id/listView"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_weight="1"
+        android:layout_height="0dp"></ListView>
     <Button
         android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/buton_rotund"
         android:id="@+id/addButton"
         android:layout_height="50dp"
+
         android:text="Save"/>
 
 </LinearLayout>

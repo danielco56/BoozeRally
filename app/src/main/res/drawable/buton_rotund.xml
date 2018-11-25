@@ -9,13 +9,13 @@
         <shape android:shape="rectangle">
             <corners android:radius="10dip" />
             <stroke android:width="1dip" android:color="#cfd8dc" />
-            <solid android:color="#cfd8dc" />
+            <solid android:color="#58857e" />
         </shape>
     </item>
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="100dip" />
-            <gradient android:angle="-90" android:endColor="#cfd8dc" android:startColor="#cfd8dc" />
+            <gradient android:angle="-90" android:endColor="#886176" android:startColor="#886176" />
         </shape>
     </item>
 </selector>
