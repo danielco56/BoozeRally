@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:text="4 Trasee"
+                android:text="4 Tracks"
                 android:textSize="20dp"
                 android:layout_below="@+id/nume"
                 android:textStyle="italic"
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        android:text="Bere, Whiskey"
+                        android:text="Beer, Whiskey"
                         android:textSize="15sp" />
 
 
@@ -159,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        android:text="Long drink, Shoturi"
+                        android:text="Long drink, Shots"
                         android:textSize="15sp" />
 
 
@@ -207,7 +207,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        android:text="Bere, Shoturi, Whiskey"
+                        android:text="Beer, Shots, Whiskey"
                         android:textSize="15sp" />
 
 
@@ -255,7 +255,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        android:text="Whiskey, Vin, Cogniac"
+                        android:text="Whiskey,Vine,Cogniac"
                         android:textSize="15sp" />
 
 

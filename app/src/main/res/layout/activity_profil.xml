@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profil"
+    android:background="@drawable/register">
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:id="@+id/img"
+        android:layout_height="120dp"
+        android:src="@drawable/norbi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Norbi"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="25dp"/>
+
+
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button"
+        android:textAllCaps="false"
+        android:layout_marginTop="115dp"
+        android:text="Groups"
+        android:layout_below="@+id/img"
+        android:textColor="#FF8E9494"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/grupe"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button"
+        android:textAllCaps="false"
+        android:layout_marginTop="15dp"
+        android:text="Tracks"
+        android:layout_below="@+id/grupe"
+        android:textColor="#FF8E9494"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Trasee"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button"
+        android:textAllCaps="false"
+        android:layout_marginTop="15dp"
+        android:text="Ranking"
+        android:layout_below="@+id/Trasee"
+        android:textColor="#FF8E9494"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/clasament"/>
+
+</RelativeLayout>

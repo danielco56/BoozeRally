@@ -21,8 +21,8 @@ public class hartile extends AppCompatActivity {
     private Button start, finish;
     private Chronometer cronos;
     private String[] timp = {"20 Mins", "30 Mins", "1 Hour", "30 Mins", "10 Mins"};
-    private String[] Baruri = {"Studio 26", "Booha", "Niko", "Living pub", "Infinity"};
-    private String[] Bauturi = {"2x Absint, 1x bere", "300ml Cogniac", "500ml Vin", "200ml Votca, 1x bere", "100ml Unirea"};
+    private String[] Baruri = {"Moonshine", "Enigma", "Shto", "Che Guevara"};
+    private String[] Bauturi = {"4xBeer","5xBeer | 4xBeer","3xTequila | 3xWhiskey","8xBere"};
     private CheckBox box;
     private ListView list;
     private int nr = 0;

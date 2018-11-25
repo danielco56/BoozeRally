@@ -42,7 +42,7 @@ public class Groups extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Groups.this, reg.Users.get(position) + "Adaugat",Toast.LENGTH_LONG).show();
+                Toast.makeText(Groups.this, reg.Users.get(position) + " Adaugat",Toast.LENGTH_SHORT).show();
                 numePersoane.add(reg.Users.get(position));
 
             }
@@ -51,7 +51,7 @@ public class Groups extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 grupNou=new Grup(denumire.getText().toString(),numePersoane);
+                grupNou=new Grup(denumire.getText().toString(),numePersoane);
                 Intent intent= new Intent(Groups.this, UIGrup.class);
                 startActivity(intent);
             }

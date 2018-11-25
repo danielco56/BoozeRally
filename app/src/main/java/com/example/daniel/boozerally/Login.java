@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
     private EditText email, password;
     private Button log;
     private TextView register;
-    private Register reg=new Register();
+    private Register reg = new Register();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +36,9 @@ public class Login extends AppCompatActivity {
         log = (Button) findViewById(R.id.login);
         register = (TextView) findViewById(R.id.register);
 
-        reg.Users.add("dragonu");
-        reg.Users.add("istvan");
-        reg.Users.add("Chiori");
+        reg.Users.add("Mihai");
+        reg.Users.add("Daniel");
+        reg.Users.add("Laura");
 
         log.setOnClickListener(new View.OnClickListener() {
             @Override
