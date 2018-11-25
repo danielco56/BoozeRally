@@ -18,6 +18,7 @@
         android:background="@drawable/mybutton"
         android:id="@+id/denGrup"
         />
+
     <ListView
         android:layout_margin="5dp"
         android:padding="5dp"
@@ -31,7 +32,8 @@
         android:background="@drawable/buton_rotund"
         android:id="@+id/addButton"
         android:layout_height="50dp"
-
+        android:textSize="20dp"
+        android:textColor="#FF8E9494"
         android:text="Save"/>
 
 </LinearLayout>

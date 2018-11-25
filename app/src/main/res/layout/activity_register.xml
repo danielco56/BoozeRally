@@ -5,39 +5,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/register"
     tools:context=".Register">
 
     <EditText
         android:id="@+id/user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="username" />
+        android:background="@drawable/edit_text"
+        android:textColorHint="#FF8E9494"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:paddingStart="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="30dp"
+        android:hint="Username" />
 
     <EditText
+        android:textColorHint="#FF8E9494"
         android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="email" />
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:paddingStart="20dp"
+        android:layout_width="250dp"
+        android:background="@drawable/edit_text"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:hint="Email" />
 
     <EditText
+        android:textColorHint="#FF8E9494"
         android:id="@+id/pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
+        android:layout_gravity="center"
+        android:paddingStart="20dp"
+        android:layout_width="250dp"
+        android:background="@drawable/edit_text"
+        android:textColor="#FFFFFF"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:hint="Password"
         android:inputType="textPassword" />
 
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:paddingStart="20dp"
+        android:textColorHint="#FF8E9494"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_text"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:textSize="20dp"
+        android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:background="@drawable/button"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="110dp"
+        android:textColor="#FF8E9494"
+        android:layout_marginRight="30dp"
         android:text="Register" />
 
     <TextView
@@ -45,7 +88,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="45dp"
+        android:textColor="#886176"
         android:text="Already have an account. Sign in!"
         android:textSize="20sp" />
 

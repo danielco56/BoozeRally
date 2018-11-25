@@ -1,6 +1,7 @@
 package com.example.daniel.boozerally;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -19,11 +20,12 @@ import android.widget.TextView;
 public class hartile extends AppCompatActivity {
     private Button start, finish;
     private Chronometer cronos;
-    String[] Baruri = {"Studio 26","Booha","Niko","Living pub","Infinity"};
-    String[] Bauturi = {"2 shoturi absint, o bere", "300ml de coniac", "500ml de vin","200ml de votca, o bere","100ml Unirea"};
-    CheckBox box;
-    ListView list;
-    int nr=0;
+    private String[] timp = {"20 Mins", "30 Mins", "1 Hour", "30 Mins", "10 Mins"};
+    private String[] Baruri = {"Studio 26", "Booha", "Niko", "Living pub", "Infinity"};
+    private String[] Bauturi = {"2x Absint, 1x bere", "300ml Cogniac", "500ml Vin", "200ml Votca, 1x bere", "100ml Unirea"};
+    private CheckBox box;
+    private ListView list;
+    private int nr = 0;
     private long lastpause;
 
     @Override
@@ -31,66 +33,76 @@ public class hartile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hartile2);
 
-        start =  findViewById(R.id.start);
+        start = findViewById(R.id.start);
         cronos = findViewById(R.id.crono);
         finish = findViewById(R.id.finish);
 
         list = findViewById(R.id.lista);
-        MyAdapter adapter = new MyAdapter(this, Baruri, Bauturi, box);
+        MyAdapter adapter = new MyAdapter(this, Baruri, Bauturi, box, timp);
         list.setAdapter(adapter);
         list.setSelector(android.R.color.transparent);
         list.setDivider(null);
 
+        box = (CheckBox) findViewById(R.id.checkbox);
+
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (lastpause != 0){
+                if (lastpause != 0) {
                     cronos.setBase(cronos.getBase() + SystemClock.elapsedRealtime() - lastpause);
-                }
-                else{
+                } else {
                     cronos.setBase(SystemClock.elapsedRealtime());
                 }
                 cronos.start();
                 start.setEnabled(false);
             }
         });
+
+
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cronos.stop();
                 finish.setEnabled(false);
+                Intent intent = new Intent(hartile.this, Clasament.class);
+                startActivity(intent);
 
             }
         });
+
     }
-    class MyAdapter extends ArrayAdapter<String>{
+
+    class MyAdapter extends ArrayAdapter<String> {
         Context context;
         String myBaruri[];
         String myBauturi[];
         CheckBox box;
+        String timp[];
 
-        MyAdapter(Context c, String[] baruri, String[] bauturi, CheckBox box){
-            super(c,R.layout.row,R.id.bar, Baruri);
-            this.context=c;
-            this.myBaruri=baruri;
-            this.myBauturi=bauturi;
+        MyAdapter(Context c, String[] baruri, String[] bauturi, CheckBox box, String[] timp) {
+            super(c, R.layout.row, R.id.bar, Baruri);
+            this.context = c;
+            this.myBaruri = baruri;
+            this.timp = timp;
+            this.myBauturi = bauturi;
         }
 
         @NonNull
         @Override
         public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
 
-            LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = layoutInflater.inflate(R.layout.row, parent, false);
+            TextView mytimp = row.findViewById(R.id.timp);
             TextView myBar = row.findViewById(R.id.bar);
             TextView myBautura = row.findViewById(R.id.bauturi);
 
-
+            mytimp.setText(timp[position]);
             myBar.setText(Baruri[position]);
             myBautura.setText(Bauturi[position]);
 
             return row;
         }
     }
-
 }
+

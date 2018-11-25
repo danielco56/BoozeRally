@@ -21,7 +21,9 @@
         <activity android:name=".Traseul1" />
         <activity android:name=".Groups" />
         <activity android:name=".UIGrup" />
-        <activity android:name=".hartile"></activity>
+        <activity android:name=".hartile" />
+        <activity android:name=".Profil" />
+        <activity android:name=".Clasament"></activity>
     </application>
 
 </manifest>

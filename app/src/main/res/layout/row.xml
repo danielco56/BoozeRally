@@ -5,35 +5,52 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center"
-    android:layout_margin="5dp"
-    android:background="@drawable/model"
+
     >
     <CheckBox
-        android:layout_margin="5dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:scaleX="2.20"
+        android:scaleY="2.20"
         android:id="@+id/checkbox"
         />
-    <LinearLayout
+    <RelativeLayout
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        >
 
         <TextView
             android:id="@+id/bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="barul"
-            android:textSize="30dp"
+            android:text="Barul"
+            android:padding="3dp"
+            android:textSize="20dp"
             android:gravity="center"/>
         <TextView
             android:id="@+id/bauturi"
+            android:layout_marginTop="1dp"
+            android:padding="3dp"
+            android:layout_below="@+id/bar"
+            android:textColor="#886176"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="bauturi"
-            android:textSize="18dp"
+            android:text="Bauturi"
+            android:textSize="15dp"
             android:gravity="center"/>
-    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 min"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:id="@+id/timp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
 
 </LinearLayout>
